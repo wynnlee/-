@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>—层的切换—</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="jquerymobile1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="jquery-mobile-theme-180024-0/themes/mytheme.min.css">
+<script type="text/javascript" src="jquery-1.12.3.min.js" ></script>
+
+<script>
+    $(document).bind('mobileinit',function(){
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+</script> 
+<script type="text/javascript" src="jquerymobile1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+// $(document).on("pagebeforecreate",function(){
+//   alert("触发事件！")
+// });
+// $(document).on("pagecreate",function(){
+//   alert("触发事件1！")
+// });
+// $(document).on("pageinit",function(){
+//   alert("触发事件2！")
+
+// });
+// $(".div1a").on("click",function(e){
+//   alert("触发事件2！")
+//   alert(e.lengh);
+  
+// });
+// $(document).on("pagecontainerload",function(event,data){
+// 	alert("触发事件！\nURL:"+data.url);
+// });
+// $(document).on("pagecontainerloadfailed",function(event,data){
+//     alert("抱歉，被请求页面不存在。");
+// });
+// $(document).one("pagecreate",function(){
+// 	$(".div1a").on("click",function(){
+// 		$.mobile.changePage("#second",{transition:"slideup"});
+// 	});
+// 	$("#go").on("click",function(){
+// 		$.mobile.changePage("mama.html",{
+// 			transition:"slidedown",
+// 			changeHash:true
+// 		});
+// 	});
+// });
+$(document).bind("mobileinit",function(){
+	$.event.special.tap.tapholdThreshhold=3000;
+})
+$(document).on("pageinit","#first",function(){
+	$("#content").on("taphold",function(){
+		$(this).hide();
+	});
+});
+</script>
+<style type="text/css">
+
+
+.bg .two .btn2{
+
+	width: 110px;
+}
+
+
+
+.aaa{
+	color: pink;
+
+
+}
+
+</style>
+</head>
+
+
+<body >
+	<!-- 第一页 -->
+	<div data-role="page" data-title="qq" id="first" class="bg">
+		<div data-role="header">
+			<h4 class="man">微信</h4>
+		</div>
+		<div data-role="content" id="content">
+		    <!-- <span class="div1span">账号：</span><input  type="text"  placeholder="手机号/邮箱">
+		    <span class="div1span">密码：</span><input  type="password"  data-icon="arrow-d">
+		    
+		    <span class="div1span">记住密码</span>
+
+			<button type="button" >登 录</button>
+			<a href="#second"  class="div1a">按我到第二页</a><br>
+					
+				<div data-role="controlgroup" class="one" >
+				<a href="" data-role="button" class="btn1">新闻</a>
+				<a href="" data-role="button" class="btn1">运动</a>
+				<a href="" data-role="button" class="btn1">电影</a>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal" class="two" data-role="none">
+				
+					<a href="" data-role="button" class="btn2">新闻</a>
+					<a href="" data-role="button" class="btn2">运动</a>
+					<a href="" data-role="button" class="btn2">电影</a>
+				
+				
+			</div>
+			<h2>List Dividers</h2>
+		    <ul data-role="listview">
+		      <li data-role="list-divider">欧洲</li>
+		      <li>
+		      	
+		      	<a href="#"><img src="23.png" class="t">德国<p class="aaa">啦啦啦啦</p></a>
+		      	
+		      </li>
+		      <li><a href="#">英国</a></li>
+		      <li data-role="list-divider">亚洲</li>
+		      <li><a href="#">中国</a></li>
+		      <li><a href="#">印度</a></li>
+		      <li data-role="list-divider">非洲</li>
+		      <li><a href="#">埃及</a></li>
+		      <li><a href="#">南非</a></li>
+		    </ul> -->
+
+		        
+			   
+			    	<div data-role="controlgroup" data-type="horizontal" class="two" data-role="none">
+				
+					<a href="" data-role="button" class="btn2">好友</a>
+					<a href="" data-role="button" class="btn2">群</a>
+					
+				
+				
+			</div>
+			     
+			    <ul data-role="listview" data-filter="true"  data-autodividers="true" data-inset="true" >
+			      <li data-filtertext="fav">
+			      	<a href="#">Adele</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Agnes</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Albert</a><a href="#">文本信息</a></li>
+			      <li><a href="www.baidu.com">Baidu</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Billy</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Bob</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Calvin</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Cameron</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Chloe</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Christina</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Diana</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Frank</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Gabriel</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Glen</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Ralph</a><a href="#">文本信息</a></li>
+			      <li><a href="#">Valarie</a><a href="#">文本信息</a></li>
+			    </ul>
+			    <a href="#second"  class="div1a">按我到第二页</a>
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		
+		</div>
+
+	</div>
+
+	<div data-role="page" data-title="第二页" id="second">
+		<div data-role="header">
+			<h1>第二页</h1>
+		</div>
+		<div data-role="content" id="content">
+			<a href="#" id="go">按我</a><a href="#first" data-role="back"> 回上页</a>
+				<div data-role="controlgroup" class="one" >
+				<a href="" data-role="button" class="btn1">新闻</a>
+				<a href="" data-role="button" class="btn1">运动</a>
+				<a href="" data-role="button" class="btn1">电影</a>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal" class="two">
+				<a href="" data-role="button" class="btn2">新闻</a>
+				<a href="" data-role="button" class="btn2">运动</a>
+				<a href="" data-role="button" class="btn2">电影</a>
+			</div>
+			<h2>List Dividers</h2>
+		    <ul data-role="listview">
+		      <li data-role="list-divider">欧洲</li>
+		      <li>
+		      
+		      	<a href="#">德国</a></li>
+		      <li><a href="#">英国</a></li>
+		      <li data-role="list-divider">亚洲</li>
+		      <li><a href="#">中国</a></li>
+		      <li><a href="#">印度</a></li>
+		      <li data-role="list-divider">非洲</li>
+		      <li><a href="#">埃及</a></li>
+		      <li><a href="#">南非</a></li>
+		    </ul>
+
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+
+		
+</body>
+</html>
